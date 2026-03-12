@@ -1,4 +1,4 @@
-# Delhi-Intel 3D 🏙️
+# LokSync: Intel 3D 🏙️
 
 ### Advanced AI-Powered Smart City Operating System — Delhi NCT
 
