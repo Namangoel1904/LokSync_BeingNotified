@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  --color-electric-500: #3b82f6;
+  --color-electric-400: #60a5fa;
+  --color-neon-400: #4ade80;
+  --color-neon-300: #86efac;
+  --color-crimson-500: #ef4444;
+  --color-crimson-400: #f87171;
+  --color-amber-400: #fbbf24;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+:root {
+  /* Common variables */
+  --color-electric: #3b82f6;
+  --color-neon: #4ade80;
+  --color-crimson: #ef4444;
+
+  /* App Variables (Light Theme) */
+  --app-bg: #f1f5f9;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-subtle: #94a3b8;
+  
+  --panel-bg: rgba(255, 255, 255, 0.85);
+  --panel-bg-hover: rgba(255, 255, 255, 0.95);
+  --panel-border: rgba(59, 130, 246, 0.2);
+  
+  --glass-red-bg: rgba(254, 226, 226, 0.9);
+  --glass-red-border: rgba(239, 68, 68, 0.4);
+
+  --header-bg: rgba(255, 255, 255, 0.9);
+
+  --tooltip-bg: rgba(255, 255, 255, 0.98);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+/* Map reset */
+.maplibregl-map {
+  font-family: "Inter", sans-serif !important;
+}
+
+.maplibregl-ctrl-attrib, .maplibregl-ctrl-logo {
+  display: none !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.4);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
+/* Pulse animation for markers */
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.pulse-green::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid #4ade80;
+  animation: pulse-ring 1.5s ease-out infinite;
+}
+
+/* Theme-agnostic Utility classes */
+.glass {
+  background: var(--panel-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--panel-border);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.glass-red {
+  background: var(--glass-red-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-red-border);
+}
+
+/* Scanline overlay (only visible in dark mode effectively, subtle in light mode) */
+.scanlines::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
