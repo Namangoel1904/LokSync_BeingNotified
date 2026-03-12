@@ -43,16 +43,6 @@ The system uses a sophisticated geographic boundary architecture to visualize se
 
 ---
 
-## 📊 Thematic Views
-
-````carousel
-![Education Theme](file:///C:/Users/naman/.gemini/antigravity/brain/73b7de59-23d0-4fa4-a3e5-2e50fd86114e/education_layer_active_1773337119325.png)
-<!-- slide -->
-![Healthcare Theme](file:///C:/Users/naman/.gemini/antigravity/brain/73b7de59-23d0-4fa4-a3e5-2e50fd86114e/healthcare_layer_active_1773337155587.png)
-````
-
----
-
 ## 🏗️ Getting Started
 
 ### Prerequisites
