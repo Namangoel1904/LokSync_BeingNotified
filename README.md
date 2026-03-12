@@ -4,7 +4,7 @@
 
 Delhi-Intel 3D is a next-generation "News-Room" style dashboard designed for urban monitoring and real-time intelligence. It features a runtime-rendered 3D city model of Central Delhi integrated with thematic data streams for Education, Healthcare, Infrastructure, and Security.
 
-![Dashboard Preview](https://github.com/Namangoel1904/LokSync_BeingNotified/blob/main/Screenshot%202026-03-12%20231931.png)
+![Dashboard Preview](https://github.com/Namangoel1904/LokSync_BeingNotified/blob/main/LokSync%20Smart%20City%20Operating%20System%20-%20Delhi%20NCT.jpg)
 
 ---
 
